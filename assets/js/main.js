@@ -138,8 +138,8 @@
   }
 
   modal.addEventListener("click", modalClick);
+  var menuHeader = document.getElementById("header");
   function modalClick() {
-    var menuHeader = document.getElementById("header");
     modal.style.display = "none";
     menuHeader.style.display = "block";
   }
@@ -156,8 +156,7 @@
     img.onclick = function () {
       var menuHeader = document.getElementById("header");
       modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
+      modalImg.src = this.alt;
       menuHeader.style.display = "none";
     };
   });
