@@ -152,12 +152,48 @@
   ) {
     // Get the image and insert it inside the modal - use its "alt" text as a caption
     var modalImg = document.getElementById("modalImg");
-    var captionText = document.getElementById("caption");
     img.onclick = function () {
       var menuHeader = document.getElementById("header");
       modal.style.display = "block";
       modalImg.src = this.alt;
       menuHeader.style.display = "none";
+    };
+  });
+
+  //////////
+
+  var modalVideo = document.getElementById("myModalVideo");
+  var modalImgContentVideo = document.getElementById("modalVideo");
+
+  modalImgContentVideo.addEventListener("click", modalContentClickVideo);
+
+  function modalContentClickVideo(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    return false;
+  }
+
+  modalVideo.addEventListener("click", modalClickVideo);
+  var menuHeaderVideo = document.getElementById("header");
+  function modalClickVideo() {
+    modalVideo.style.display = "none";
+    menuHeaderVideo.style.display = "block";
+  }
+
+  // Thumbs.
+  Array.from(document.getElementsByClassName("videoPop")).forEach(function (
+    video,
+    index,
+    array
+  ) {
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    video.onclick = function () {
+      var menuHeaderVideo = document.getElementById("header");
+      modalVideo.style.display = "block";
+      modalImgContentVideo.src = this.alt;
+      menuHeaderVideo.style.display = "none";
+      console.log("hi");
     };
   });
 })(jQuery);

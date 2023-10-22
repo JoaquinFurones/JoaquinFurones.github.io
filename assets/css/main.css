@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	scroll-behavior: smooth;}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -99,6 +100,8 @@ body {
 	animation-duration: 0.6s;
   }
 
+  
+
   @keyframes zoom {
 	from {transform:scale(0)}
 	to {transform:scale(1)}
@@ -128,6 +131,13 @@ body {
 	  width: 100%;
 	}
   }
+
+  .curriculum {
+	max-width: 320px;
+	max-height: 320px;
+	margin-left: 3em;
+  }
+
 
 /*MIO*/
 
@@ -3516,7 +3526,7 @@ input, select, textarea {
 			filter: blur(0);
 			opacity: 1;
 			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-			font-size: 2.25em;
+			font-size: 3em;
 			margin-bottom: 0.8em;
 			padding-bottom: 0.4em;
 		}
@@ -3884,9 +3894,10 @@ input, select, textarea {
 			}
 
 			.wrapper.spotlight .image {
+				box-shadow: 0px 0px 8px #000000;
 				border-radius: 100%;
 				margin: 0 3em 2em 0;
-				width: 22em;
+				width: 28em;
 				overflow: hidden;
 				-ms-flex: 1;
 			}
@@ -4121,7 +4132,7 @@ input, select, textarea {
 		}
 
 		#footer .inner .contact {
-			width: calc(50% - 1.5em);
+			width: calc(30% - 1.5em);
 		}
 
 		#footer .inner .copyright {
